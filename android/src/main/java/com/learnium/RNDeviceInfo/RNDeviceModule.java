@@ -42,7 +42,7 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
     this.reactContext = reactContext;
 
 
-    WifiManager manager = (WifiManager) reactContext.getSystemService(Context.WIFI_SERVICE);
+    WifiManager manager = (WifiManager) reactContext.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
     this.wifiInfo = manager.getConnectionInfo();
   }
 
